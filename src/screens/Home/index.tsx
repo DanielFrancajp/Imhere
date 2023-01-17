@@ -13,6 +13,7 @@ import { Participant } from '../../components/Participant'
 
 import { styles } from './styles'
 
+
 export default function Home() {
 
     const [participants, setParticipants] = useState<string[]>([])
@@ -28,11 +29,11 @@ export default function Home() {
     }
 
     function handleParticipantRemove(name: string) {
-      
+
         Alert.alert("Remover", `Remover o participante ${name}?`, [
             {
                 text: 'Sim',
-                onPress: () =>  setParticipants(prevState => prevState.filter(participant => participant !== name))
+                onPress: () => setParticipants(prevState => prevState.filter(participant => participant !== name))
             },
             {
                 text: 'Não',
